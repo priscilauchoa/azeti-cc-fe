@@ -1,11 +1,11 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 
-interface Props {
+type Props = {
 	width?: string;
 	height?: string;
 	url: string;
-}
+};
 
 export default function ImageAvatars(props: Props) {
 	return (

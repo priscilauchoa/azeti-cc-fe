@@ -2,14 +2,14 @@ import React from 'react';
 import { Field } from 'formik';
 import TextField from '@material-ui/core/TextField';
 
-interface Props {
+type Props = {
 	id: string;
 	label: string;
 	name: string;
 	placeholder: string;
 	type?: string;
 	required?: boolean;
-}
+};
 
 export default function FormField(props: Props) {
 	return (

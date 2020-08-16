@@ -3,19 +3,18 @@ import { Formik, Field, Form } from 'formik';
 import Button from '@material-ui/core/Button';
 import FormField from './FormField';
 
-const FormEdit = () => (
-	<div>
-		<h1>EDIT</h1>
-		<Formik
-			initialValues={{
-				name: '',
-				email: ''
-			}}
-			onSubmit={async (values) => {
-				await new Promise((r) => setTimeout(r, 500));
-				alert(JSON.stringify(values, null, 2));
-			}}
-		>
+export default function FormEdit() {
+	const initialValues = {
+		name: '',
+		email: ''
+	};
+
+	const handleOnSubmit = (values: any) => {
+		alert(JSON.stringify(values, null, 2));
+	};
+
+	return (
+		<Formik initialValues={initialValues} onSubmit={handleOnSubmit}>
 			<Form>
 				<FormField label="Name" id="name" name="name" placeholder="Priscila Flores" required={true} />
 				<FormField
@@ -32,6 +31,5 @@ const FormEdit = () => (
 				</Button>
 			</Form>
 		</Formik>
-	</div>
-);
-export default FormEdit;
+	);
+}
