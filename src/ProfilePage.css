@@ -1,0 +1,9 @@
+/* .profile-page {
+	height: 100%;
+} */
+/* .profile-page .avatar {
+} */
+
+.profile-page .cover {
+	display: flex;
+}
