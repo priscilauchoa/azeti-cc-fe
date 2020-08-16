@@ -9,6 +9,7 @@ type Props = {
 	placeholder: string;
 	type?: string;
 	required?: boolean;
+	fullWidth?: boolean;
 };
 
 export default function FormField(props: Props) {
@@ -24,6 +25,7 @@ export default function FormField(props: Props) {
 				placeholder={props.placeholder}
 				type={props.type}
 				required={props.required}
+				fullWidth={props.fullWidth}
 			/>
 		</div>
 	);
