@@ -29,23 +29,13 @@ const useStyles = makeStyles((theme: Theme) =>
 	})
 );
 
-export default function MenuAppBar() {
+type Props = {
+	onEditClick?(): void;
+	onNotificationClick?(): void;
+};
+
+export default function MenuAppBar(props: Props) {
 	const classes = useStyles();
-	const [ auth, setAuth ] = React.useState(true);
-	const [ anchorEl, setAnchorEl ] = React.useState(null);
-	const open = Boolean(anchorEl);
-
-	const handleChange = (event: any) => {
-		setAuth(event.target.checked);
-	};
-
-	const handleMenu = (event: any) => {
-		setAnchorEl(event.currentTarget);
-	};
-
-	const handleClose = () => {
-		setAnchorEl(null);
-	};
 
 	return (
 		<div className={classes.root}>
@@ -61,45 +51,23 @@ export default function MenuAppBar() {
 					</IconButton>
 					<IconButton aria-label="show 2 new notifications" color="inherit">
 						<Badge badgeContent={2} color="secondary">
-							<NotificationsIcon />
+							<NotificationsIcon onClick={props.onNotificationClick} />
 						</Badge>
 					</IconButton>
 					<IconButton aria-label="show 1 new mails" color="inherit">
 						<Badge>
-							<EditIcon />
+							<EditIcon onClick={props.onEditClick} />
 						</Badge>
 					</IconButton>
-					{auth && (
-						<div>
-							<IconButton
-								aria-label="account of current user"
-								aria-controls="menu-appbar"
-								aria-haspopup="true"
-								onClick={handleMenu}
-								color="inherit"
-							>
-								<ImageAvatar url="https://m.campuse.ro/archives/profile_photos/2019/01/11/636804-2676353562.JPG" />
-							</IconButton>
-							<Menu
-								id="menu-appbar"
-								anchorEl={anchorEl}
-								anchorOrigin={{
-									vertical: 'top',
-									horizontal: 'right'
-								}}
-								keepMounted
-								transformOrigin={{
-									vertical: 'top',
-									horizontal: 'right'
-								}}
-								open={open}
-								onClose={handleClose}
-							>
-								{/* <MenuItem onClick={handleClose}>Profile</MenuItem> */}
-								<MenuItem onClick={handleClose}>My profile</MenuItem>
-							</Menu>
-						</div>
-					)}
+
+					<IconButton
+						aria-label="account of current user"
+						aria-controls="menu-appbar"
+						aria-haspopup="true"
+						color="inherit"
+					>
+						<ImageAvatar url="https://m.campuse.ro/archives/profile_photos/2019/01/11/636804-2676353562.JPG" />
+					</IconButton>
 				</Toolbar>
 			</AppBar>
 		</div>
