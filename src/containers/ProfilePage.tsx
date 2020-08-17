@@ -10,7 +10,8 @@ export default function ProfilePage() {
 	const initialProfile: ProfileType = {
 		name: 'Priscila Flores',
 		email: 'priscila@gmail.com',
-		url: 'https://m.campuse.ro/archives/profile_photos/2019/01/11/636804-2676353562.JPG'
+		url:
+			'https://media-exp1.licdn.com/dms/image/C4D03AQEmShiw7-5qXg/profile-displayphoto-shrink_200_200/0?e=1603324800&v=beta&t=mZKOXnFLfchBB2j1mcUPY3qcHXdp1tyijwsmbOUtxec'
 	};
 	const [ editFormOpen, setEditFormVisibility ] = React.useState(false);
 	const [ profile, setProfile ] = React.useState(initialProfile);
@@ -32,7 +33,7 @@ export default function ProfilePage() {
 	return (
 		<div className="profile-page">
 			<Header onEditClick={handleEditFormOpen} profile={profile} />
-			<Dialog open={editFormOpen} onClose={handleEditFormClose} title="Edit">
+			<Dialog open={editFormOpen} onClose={handleEditFormClose} title="EDIT PROFILE">
 				<FormEdit onCloseButton={handleEditFormClose} onSubmit={handleOnSubmit} profile={profile} />
 			</Dialog>
 

@@ -1,0 +1,5 @@
+@media only screen and (max-width: 350px) {
+	.MuiDialog-paperWidthSm {
+		width: 90vh;
+	}
+}

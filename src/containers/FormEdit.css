@@ -1,6 +1,6 @@
 .form {
-	width: 50vw;
-	height: 30vw;
+	width: 100%;
+	height: 100%;
 }
 
 .button-form {
@@ -10,4 +10,11 @@
 
 .button-form > button {
 	margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+	.form {
+		width: 100%;
+		max-width: 800px;
+	}
 }
