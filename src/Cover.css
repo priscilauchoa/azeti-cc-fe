@@ -2,4 +2,7 @@
 	background-position: center;
 	background-size: cover;
 	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

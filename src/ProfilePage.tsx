@@ -1,5 +1,4 @@
 import React from 'react';
-import './ProfilePage.css';
 import Cover from './Cover';
 import Header from './Header';
 import FormEdit, { ProfileType } from './FormEdit';
@@ -35,10 +34,10 @@ export default function ProfilePage() {
 			<Dialog open={editFormOpen} onClose={handleEditFormClose} title="Edit">
 				<FormEdit onCloseButton={handleEditFormClose} onSubmit={handleOnSubmit} profile={profile} />
 			</Dialog>
-			<div>
+
+			<Cover url="https://c.pxhere.com/photos/8d/ed/apple_coffee_shop_computer_iphone_laptop_macbook_pro_notebook_pen-992541.jpg!d">
 				<FeedProfile profile={profile} />
-				<Cover url="https://c.pxhere.com/photos/8d/ed/apple_coffee_shop_computer_iphone_laptop_macbook_pro_notebook_pen-992541.jpg!d" />
-			</div>
+			</Cover>
 		</div>
 	);
 }
