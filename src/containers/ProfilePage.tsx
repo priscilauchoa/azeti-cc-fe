@@ -1,9 +1,10 @@
 import React from 'react';
 import Cover from '../components/Cover';
 import Header from './Header';
-import FormEdit, { ProfileType } from './FormEdit';
+import FormEdit from './FormEdit';
 import Dialog from '../components/Dialog';
 import FeedProfile from '../components/FeedProfile';
+import { ProfileType } from '../types';
 
 export default function ProfilePage() {
 	const initialProfile: ProfileType = {

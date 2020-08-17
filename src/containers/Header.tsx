@@ -10,7 +10,7 @@ import Avatar from '../components/Avatar';
 import EditIcon from '@material-ui/icons/Edit';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import './Header.css';
-import { ProfileType } from './FormEdit';
+import { ProfileType } from '../types';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({

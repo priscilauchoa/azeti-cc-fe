@@ -3,12 +3,7 @@ import { Formik, Field, Form } from 'formik';
 import Button from '@material-ui/core/Button';
 import FormField from '../components/FormField';
 import './FormEdit.css';
-
-export type ProfileType = {
-	name: string;
-	email: string;
-	url: string;
-};
+import { ProfileType } from '../types';
 
 type Props = {
 	onCloseButton(): void;
