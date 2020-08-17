@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
-import { ProfileType } from './FormEdit';
+import { ProfileType } from '../containers/FormEdit';
 
 type Props = {
 	width?: string;

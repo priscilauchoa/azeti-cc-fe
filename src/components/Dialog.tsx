@@ -12,7 +12,7 @@ type Props = {
 
 export default function Dialog(props: Props) {
 	return (
-		<MaterialDialog open={!!props.open} onClose={props.onClose} aria-labelledby="form-dialog-title">
+		<MaterialDialog open={props.open} onClose={props.onClose} aria-labelledby="form-dialog-title">
 			<DialogTitle id="form-dialog-title">{props.title}</DialogTitle>
 			<DialogContent>{props.children}</DialogContent>
 		</MaterialDialog>

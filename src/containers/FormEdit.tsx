@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import Button from '@material-ui/core/Button';
-import FormField from './FormField';
+import FormField from '../components/FormField';
 import './FormEdit.css';
 
 export type ProfileType = {
