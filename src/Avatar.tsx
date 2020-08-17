@@ -1,21 +1,20 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
+import { ProfileType } from './FormEdit';
 
 type Props = {
 	width?: string;
 	height?: string;
-	url: string;
+	profile: ProfileType;
 };
 
 export default function ImageAvatars(props: Props) {
 	return (
-		// <div className={classes.root}>
 		<Avatar
 			className="avatar"
-			alt="Priscila Flores"
-			src={props.url}
+			alt={props.profile.name}
+			src={props.profile.url}
 			style={{ width: props.width, height: props.height }}
 		/>
-		// </div>
 	);
 }

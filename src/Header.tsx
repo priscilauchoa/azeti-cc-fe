@@ -3,15 +3,14 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
 import MailIcon from '@material-ui/icons/Mail';
 import Badge from '@material-ui/core/Badge';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import ImageAvatar from './Avatar';
+import Avatar from './Avatar';
 import EditIcon from '@material-ui/icons/Edit';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import './Header.css';
+import { ProfileType } from './FormEdit';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -32,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
 type Props = {
 	onEditClick?(): void;
 	onNotificationClick?(): void;
+	profile: ProfileType;
 };
 
 export default function MenuAppBar(props: Props) {
@@ -66,7 +66,7 @@ export default function MenuAppBar(props: Props) {
 						aria-haspopup="true"
 						color="inherit"
 					>
-						<ImageAvatar url="https://m.campuse.ro/archives/profile_photos/2019/01/11/636804-2676353562.JPG" />
+						<Avatar profile={props.profile} />
 					</IconButton>
 				</Toolbar>
 			</AppBar>
