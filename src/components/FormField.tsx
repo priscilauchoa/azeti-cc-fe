@@ -10,12 +10,14 @@ type Props = {
 	type?: string;
 	required?: boolean;
 	fullWidth?: boolean;
+	className?: string;
 };
 
 export default function FormField(props: Props) {
 	return (
 		<div>
 			<Field
+				className={props.className}
 				autoFocus
 				margin="dense"
 				label={props.label}

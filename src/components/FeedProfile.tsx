@@ -30,10 +30,10 @@ export default function MediaCard(props: Props) {
 			<CardActionArea>
 				<CardMedia className={classes.media} image={props.profile.url} title="Priscila photo profile" />
 				<CardContent>
-					<Typography gutterBottom variant="h5" component="h2">
+					<Typography className="feed-profile-name" gutterBottom variant="h5" component="h2">
 						{props.profile.name}
 					</Typography>
-					<Typography variant="body2" color="textSecondary" component="p">
+					<Typography className="feed-profile-email" variant="body2" color="textSecondary" component="p">
 						{props.profile.email}
 					</Typography>
 				</CardContent>

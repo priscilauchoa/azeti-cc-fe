@@ -5,6 +5,7 @@ import FormEdit from './FormEdit';
 import Dialog from '../components/Dialog';
 import FeedProfile from '../components/FeedProfile';
 import { ProfileType } from '../types';
+import Assistant from '../components/Assistant';
 
 export default function ProfilePage() {
 	const initialProfile: ProfileType = {
@@ -40,6 +41,7 @@ export default function ProfilePage() {
 			<Cover url="https://c.pxhere.com/photos/8d/ed/apple_coffee_shop_computer_iphone_laptop_macbook_pro_notebook_pen-992541.jpg!d">
 				<FeedProfile profile={profile} />
 			</Cover>
+			<Assistant />
 		</div>
 	);
 }

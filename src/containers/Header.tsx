@@ -54,7 +54,7 @@ export default function MenuAppBar(props: Props) {
 							<NotificationsIcon onClick={props.onNotificationClick} />
 						</Badge>
 					</IconButton>
-					<IconButton aria-label="show 1 new mails" color="inherit">
+					<IconButton className="edit-button" aria-label="show 1 new mails" color="inherit">
 						<Badge>
 							<EditIcon onClick={props.onEditClick} />
 						</Badge>
